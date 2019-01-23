@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">中交隧道局</string>
+    <string name="noNetTips">请您确认已开通手机上网功能，并在手机上设置正确的上网方式</string>
+    <string name="testBadge">2</string>
+    <string name="title_progressbar">正在下载文件</string>
+    <string name="cancelDownload">取消下载</string>
+
+    <string name="readPhoneState">应用需要读取手机串号信息才能使用后续功能，请给予权限。</string>
+</resources>

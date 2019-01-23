@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lkpower.medical">
+    
+    <!-- 防止手机休眠 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <!-- 手机访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- 以下是使用wifi访问网络所需要的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    
+   <supports-screens android:anyDensity="true" android:largeScreens="true"
+       android:normalScreens="true" android:smallScreens="true" >
+   </supports-screens>
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+		<activity
+		      android:name=".activity.SplashActivity" android:theme="@style/AppTheme"
+		      android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+		    <intent-filter >
+		        <action android:name="android.intent.action.MAIN" />
+		        <category android:name="android.intent.category.LAUNCHER" />
+		    </intent-filter>
+		</activity>
+		  
+		<activity android:name=".activity.LoginActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+		 	<intent-filter >
+		        <action android:name="com.lkpower.medical.LoginActivity" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.CatalogActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+		 	<intent-filter >
+		        <action android:name="com.lkpower.medical.CatalogActivity" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.ShowWebViewActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+		 	<intent-filter >
+		        <action android:name="com.lkpower.medical.ShowWebViewActivity" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		</activity>
+		
+		<activity android:name=".activity.SettingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan">
+		 	<intent-filter >
+		        <action android:name="com.lkpower.medical.SettingActivity" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		</activity>
+		
+		<service android:name=".service.CheckWaitItemCountService" android:label="@string/app_name" android:enabled="true" android:exported="false" android:process=":message">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </service>
+		
+		<receiver android:name=".service.CheckWaitItemCountReceiver" android:label="@string/app_name">    
+    		<intent-filter>    
+       			<action android:name="android.intent.action.BOOT_COMPLETED" />    
+       			<category android:name="android.intent.category.HOME" />    
+    		</intent-filter>    
+		</receiver>
+        
+    </application>
+
+</manifest>

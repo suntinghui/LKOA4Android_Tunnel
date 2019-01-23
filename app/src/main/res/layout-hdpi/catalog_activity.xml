@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topbg" >
+
+        <Button
+            android:id="@+id/backButton"
+            style="@style/TextView14_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/backbtn"
+            android:gravity="center"
+            android:text="OA办公系统" />
+
+        <Button
+            android:id="@+id/menuButton"
+            style="@style/TextView14_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/menubtn" />
+
+        <TextView
+            android:id="@+id/titleText"
+            style="@style/TextView17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="公文管理" />
+
+        <TextView
+            android:id="@+id/nameText"
+            style="@style/TextView14_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="张政，您好" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dip"
+        android:background="@drawable/catalog_bg"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@+id/gridveiw"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:horizontalSpacing="1dip"
+            android:numColumns="3"
+            android:verticalSpacing="5dip" />
+    </LinearLayout>
+
+</LinearLayout>
